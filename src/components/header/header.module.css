@@ -1,0 +1,38 @@
+@value makerGreen: #385461;
+@value makerWhite: white;
+
+@value baseSpace: 12px;
+
+@value fontLarge: 30px;
+
+
+
+.header {
+  width: 100%;
+  background-color: makerGreen;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: baseSpace;
+}
+
+.logout {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  color: makerWhite;
+  z-index: 99;
+}
+
+.logo {
+  width: 4rem;
+}
+
+.title {
+  color: makerWhite;
+  font-weight: 600;
+  font-size: fontLarge;
+}
