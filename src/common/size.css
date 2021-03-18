@@ -1,2 +1,6 @@
 @value mediaQuery: 62rem;
 
+@value baseSpace: 12px;
+
+/* font-size */
+@value fontLarge: 30px;
