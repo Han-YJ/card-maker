@@ -1,38 +1,35 @@
-@value makerGreen: #385461;
-@value makerWhite: white;
+@value makerGreen from '../../common/colors.css';
+@value makerWhite from '../../common/colors.css';
 
-@value baseSpace: 12px;
-
-@value fontLarge: 30px;
-
+@value baseSpace from '../../common/size.css';
 
 
 .header {
   width: 100%;
   background-color: makerGreen;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: baseSpace;
+  text-align: center;
+  padding: 0.5em;
+  position: relative;
 }
 
 .logout {
-  position: fixed;
-  right: 10px;
-  top: 10px;
+  position: absolute;
+  right: 1em;
+  top: 0.5em;
+  padding: 0.8em;
+  border-radius: 20%;
   background: none;
-  border: none;
   color: makerWhite;
-  z-index: 99;
+  outline: 0;
+  border: none;
+  cursor: pointer;
 }
 
 .logo {
-  width: 4rem;
+  width: 3em;
 }
 
 .title {
+  margin: 0;
   color: makerWhite;
-  font-weight: 600;
-  font-size: fontLarge;
 }

@@ -3,16 +3,13 @@
 
 @value baseSpace: 12px;
 
-
 .footer {
-  width: 100%;
-  background-color: makerGreen;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: baseSpace;
+	width: 100%;
+	background-color: makerGreen;
+	text-align: center;
+	padding: baseSpace;
 }
 
 .description {
-  color: makerWhite;
+	color: makerWhite;
 }
