@@ -1,37 +1,34 @@
-@value makerWhite, makerGreen, makerLightPink from '../../common/colors.css';
+@value makerGreen, makerLightPink, makerWhite from '../../common/colors.css';
 
 .login {
+  width: 30em;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 30em;
   background-color: makerWhite;
 }
 
 .list {
-  padding: 0.5rem;
-  list-style: none;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
+  list-style: none;
+  padding: 0.5rem;
 }
 
 .list li {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
 }
 
 .button {
-  width: 90%;
+  width: 100%;
   height: 2.5em;
   font-size: 1.2rem;
   border-radius: 1.2rem;
   background-color: transparent;
-  border: 0.2rem solid makerGreen;  
+  cursor: pointer;
+  border: 0.2rem solid makerGreen;
   outline: 0;
 }
 
