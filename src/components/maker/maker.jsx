@@ -6,9 +6,9 @@ import Header from '../header/header';
 import Preview from '../preview/preview';
 import styles from './maker.module.css';
 
-const Maker = ({ authService }) => {
+const Maker = ({ FileInput, authService }) => {
 	const [cards, setCards] = useState({
-    '1': {
+		1: {
 			id: '1',
 			name: 'aaa',
 			company: 'AAA',
@@ -19,7 +19,7 @@ const Maker = ({ authService }) => {
 			fileName: 'aaa',
 			fileURL: null,
 		},
-    '2': {
+		2: {
 			id: '2',
 			name: 'bbb',
 			company: 'BBB',
@@ -30,7 +30,7 @@ const Maker = ({ authService }) => {
 			fileName: 'bbb',
 			fileURL: 'bbb.png',
 		},
-    '3': {
+		3: {
 			id: '3',
 			name: 'ccc',
 			company: 'CCC',
@@ -41,7 +41,7 @@ const Maker = ({ authService }) => {
 			fileName: 'ccc',
 			fileURL: null,
 		},
-  });
+	});
 
 	const history = useHistory();
 	const onLogout = () => {
@@ -56,27 +56,33 @@ const Maker = ({ authService }) => {
 		});
 	});
 
-  const createOrUpdateCard = (card) => {
-    setCards(cards => {
-      const updated = {...cards};
-      updated[card.id] = card;
-      return updated;
-    });
-  }
+	const createOrUpdateCard = (card) => {
+		setCards((cards) => {
+			const updated = { ...cards };
+			updated[card.id] = card;
+			return updated;
+		});
+	};
 
-  const deleteCard = (card) => {
-    setCards(cards => {
-      const updated = {...cards};
-      delete updated[card.id];
-      return updated;
-    });
-  }
-  
+	const deleteCard = (card) => {
+		setCards((cards) => {
+			const updated = { ...cards };
+			delete updated[card.id];
+			return updated;
+		});
+	};
+
 	return (
 		<section className={styles.maker}>
 			<Header onLogout={onLogout} />
 			<div className={styles.container}>
-				<Editor cards={cards} addCard={createOrUpdateCard} updateCard={createOrUpdateCard} deleteCard={deleteCard} />
+				<Editor
+          FileInput={FileInput}
+					cards={cards}
+					addCard={createOrUpdateCard}
+					updateCard={createOrUpdateCard}
+					deleteCard={deleteCard}
+				/>
 				<Preview cards={cards} />
 			</div>
 			<Footer />
