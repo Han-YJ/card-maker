@@ -9,7 +9,7 @@ import ImageFileInput from './components/image_file_input/image_file_input';
 const authService = new AuthService();
 const imageUploader = new ImageUploader();
 const FileInput = props => (
-  <ImageFileInput {...props} ImageUploader={imageUploader} />
+  <ImageFileInput {...props} imageUploader={imageUploader} />
   );
 //사용자가 원하는 prop을 전달하면 ImageFileInput에 그대로 전달하게 만든것
 // 확장가능한 component가 될 수 있다. 필수적인imageUploader는 위처럼 저렇게 전달
