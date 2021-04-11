@@ -30,7 +30,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
     return () => stopSync();
     //useEffect에서 return 하게 되면 함수가 unmount되었을때 알아서 호출해준다 => 리소스나 메모리를 정리하는일을 해줄수 있다
     //useEffect의 return에서는 항상 function을 리턴해주어야 한다
-  }, [userId])
+  }, [userId, cardRepository])
 
 	useEffect(() => {
 		authService.onAuthChange((user) => {
@@ -40,7 +40,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
         history.push('/');
       }
 		});
-	});
+	}, [userId, history, authService]);
 
 	const createOrUpdateCard = (card) => {
 		setCards((cards) => {
